@@ -1,4 +1,4 @@
-#  OctoPrint
+#  OctoPrint - REDD
 
        ***************** OCTOPRINT for REDD printers  *****************************
 
