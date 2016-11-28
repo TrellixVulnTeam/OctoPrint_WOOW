@@ -1,5 +1,7 @@
 #  OctoPrint
 
+       ***************** OCTOPRINT for REDD printers  *****************************
+
 OctoPrint provides a snappy web interface for controlling a 3D printer (RepRap, Ultimaker, ...). It is Free Software
 and released under the [GNU Affero General Public License V3](http://www.gnu.org/licenses/agpl.html).
 
