@@ -191,8 +191,10 @@ def index():
 	# tabs
 
 	templates["tab"]["entries"] = dict(
-		temperature=(gettext("Temperature"), dict(template="tabs/temperature.jinja2", _div="temp")),
-		control=(gettext("Control"), dict(template="tabs/control.jinja2", _div="control")),
+	    # default Temperature tab is changed to Basic
+		temperature=("Basic", dict(template="tabs/temperature.jinja2", _div="temp")),
+	    # default Control  tab is changed to Advanced
+		control=(gettext("Advanced"), dict(template="tabs/control.jinja2", _div="control")),
 		terminal=(gettext("Terminal"), dict(template="tabs/terminal.jinja2", _div="term")),
 	)
 	if enable_gcodeviewer:
