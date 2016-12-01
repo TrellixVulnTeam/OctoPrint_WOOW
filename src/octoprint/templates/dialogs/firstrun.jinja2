@@ -1,9 +1,9 @@
 <div id="first_run_dialog" class="modal hide fade" data-backdrop="static" data-keyboard="false">
-    <div class="modal-header">
+    {#<div class="modal-header">
         <h3><i class="icon-warning-sign"></i> {{ _('Configure Access Control') }}</h3>
-    </div>
-    <div class="modal-body">
-        {% trans %}<p>
+    </div>#} 
+    <div class="modal-body firstrun">
+		{#{% trans %}<p>
             <strong>Please read the following, it is very important for your printer's health!</strong>
         </p>
             <p>
@@ -16,39 +16,47 @@
                 It looks like you haven't configured access control yet. Please <strong>set up an username and password</strong> for the
                 initial administrator account who will have full access to both the printer and OctoPrint's settings, then click
                 on "Keep Access Control Enabled":
-            </p>{% endtrans %}
-        <form class="form-horizontal">
-            <div class="control-group" data-bind="css: {success: validUsername()}">
-                <label class="control-label" for="first_run_username">{{ _('Username') }}</label>
-                <div class="controls">
-                    <input type="text" class="input-medium" data-bind="value: username, valueUpdate: 'afterkeydown'">
-                </div>
-            </div>
-            <div class="control-group" data-bind="css: {success: validPassword()}">
-                <label class="control-label" for="first_run_username">{{ _('Password') }}</label>
-                <div class="controls">
-                    <input type="password" class="input-medium" data-bind="value: password, valueUpdate: 'afterkeydown'">
-                </div>
-            </div>
-            <div class="control-group" data-bind="css: {error: passwordMismatch(), success: validPassword() && !passwordMismatch()}">
-                <label class="control-label" for="first_run_username">{{ _('Confirm Password') }}</label>
-                <div class="controls">
-                    <input type="password" class="input-medium" data-bind="value: confirmedPassword, valueUpdate: 'afterkeydown'">
-                    <span class="help-inline" data-bind="visible: passwordMismatch()">{{ _('Passwords do not match') }}</span>
-                </div>
-            </div>
-        </form>
-        {% trans %}<p>
+            </p>{% endtrans %}#}	
+		<img src = "{{url_for('static', filename='img/Slicer-Logo.png')}}"/>
+		<div class="first-page remove">
+			<p>Slicer empowers wireless 3D Printing. </p>
+			<p>We welcome you to try it out.</p>
+			<a href="#" class="btn btn-primary btn-firstpage" data-bind="click: displayNextSlide">{{ _('Next') }}</a>
+		</div>
+		<div class="first-page remove">
+			<form class="form-horizontal">
+				<div class="control-group" data-bind="css: {success: validUsername()}">
+					<label class="control-label" for="first_run_username"></label>
+					<div class="controls">
+						<input type="text" class="input-medium" placeholder="Username" data-bind="value: username, valueUpdate: 'afterkeydown'">
+					</div>
+				</div>
+				<div class="control-group" data-bind="css: {success: validPassword()}">
+					<label class="control-label" for="first_run_username"></label>
+					<div class="controls">
+						<input type="password" class="input-medium" placeholder="Password" data-bind="value: password, valueUpdate: 'afterkeydown'">
+					</div>
+				</div>
+				<div class="control-group" data-bind="css: {error: passwordMismatch(), success: validPassword() && !passwordMismatch()}">
+					<label class="control-label" for="first_run_username"></label>
+					<div class="controls">
+						<input type="password" class="input-medium" placeholder="Confirm Password" data-bind="value: confirmedPassword, valueUpdate: 'afterkeydown'">
+						<span class="help-inline" data-bind="visible: passwordMismatch()"><p>Passwords do not match</p></span>
+					</div>
+				</div>
+				<a href="#" class="btn btn-primary btn-firstpage" data-bind="click: keepAccessControl, enable: validData(), css: {disabled: !validData()}">{{ _('Create account') }}</a>
+			</form>
+			{#{% trans %}<p>
             <strong>Note:</strong> In case that your OctoPrint installation is only accessible from within a trustworthy network and you don't
             need Access Control for other reasons, you may alternatively disable Access Control. You should only
             do this if you are absolutely certain that only people you know and trust will be able to connect to it.
         </p>
             <p>
                 <strong>Do NOT underestimate the risk of an unsecured access from the internet to your printer!</strong>
-            </p>{% endtrans %}
+            </p>{% endtrans %}#}
+		</div>
     </div>
-    <div class="modal-footer">
+	{#<div class="modal-footer">
         <a href="#" class="btn btn-danger" data-bind="click: disableAccessControl">{{ _('Disable Access Control') }}</a>
-        <a href="#" class="btn btn-primary" data-bind="click: keepAccessControl, enable: validData(), css: {disabled: !validData()}">{{ _('Keep Access Control Enabled') }}</a>
-    </div>
+    </div>#}
 </div>
