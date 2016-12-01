@@ -1,0 +1,75 @@
+accessControl: 
+  salt: x80m4E0IMO0yYB2Wg1q2gTrQWPlywZwz
+api: 
+  key: FFB44012E080424A82C58E200C47866B
+appearance: 
+  color: green
+  components:
+    disabled:
+       tab:
+         - terminal 
+    order: 
+      generic: []
+      navbar: 
+        - settings
+        - systemmenu
+        - login
+      settings: 
+        - section_printer
+        - serial
+        - printerprofiles
+        - temperatures
+        - terminalfilters
+        - gcodescripts
+        - section_features
+        - features
+        - webcam
+        - accesscontrol
+        - api
+        - section_octoprint
+        - folders
+        - appearance
+        - logs
+      sidebar: 
+        - connection
+        - state
+        - files
+      tab: 
+        - temperature
+        - control
+        - gcodeviewer
+        - terminal
+        - timelapse
+      usersettings: 
+        - access
+        - interface
+    tab: 
+      - terminal
+  name: Slicer
+feature: 
+  temperatureGraph: false
+gcodeViewer: 
+  enabled: false
+plugins: 
+  announcements: 
+    channels: 
+      _important: 
+        read_until: 1478614200
+  discovery: 
+    upnpUuid: 6b364964-dabd-406b-84b4-8de0fdc2816a
+  softwareupdate: 
+    _config_version: 4
+    checks: 
+      octoprint: 
+        prerelease: false
+printerParameters: {}
+serial: 
+  maxCommunicationTimeouts: {}
+  timeout: {}
+server: 
+  commands: {}
+  firstRun: false
+  secretKey: 6fV0dxUrRqKWr2VCSNIWpoKp5HAjWf7i
+system: {}
+temperature: {}
+webcam: {}
