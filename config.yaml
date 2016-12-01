@@ -68,7 +68,7 @@ serial:
   timeout: {}
 server: 
   commands: {}
-  firstRun: false
+  firstRun: true
   secretKey: 6fV0dxUrRqKWr2VCSNIWpoKp5HAjWf7i
 system: {}
 temperature: {}
