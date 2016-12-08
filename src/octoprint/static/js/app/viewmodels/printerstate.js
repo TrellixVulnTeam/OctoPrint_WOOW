@@ -322,6 +322,6 @@ $(function() {
     OCTOPRINT_VIEWMODELS.push([
         PrinterStateViewModel,
         ["loginStateViewModel"],
-        ["#state_wrapper", "#drop_overlay"]
+        ["#state_wrapper","#state_wrapper_redd", "#drop_overlay"]
     ]);
 });
