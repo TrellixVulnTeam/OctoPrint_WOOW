@@ -596,6 +596,6 @@ $(function() {
     OCTOPRINT_VIEWMODELS.push([
         ControlViewModel,
         ["loginStateViewModel", "settingsViewModel", "tabTracking"],
-        "#control"
+        ["#control","#basic_redd"]
     ]);
 });
