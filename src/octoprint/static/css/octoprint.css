@@ -1755,7 +1755,7 @@ ul.dropdown-menu li a {
     width: 14px;
     height: 14px;
     margin-left: -7px;
-    margin-top: -3px
+    margin-top: -3px;
 }
 #control .custom_section h1 {
     cursor: pointer
@@ -1817,7 +1817,7 @@ ul.dropdown-menu li a {
     margin-left: 0
 }
 .firstrun {
-    background: #0a3831;
+    background: #ca0a00;
     height: 600px;
 }
 body{
@@ -1831,8 +1831,10 @@ body{
     margin-right: auto
 }
 .first-page p {
+	font-size: 15px;
     color: white;
-    text-align: center
+    text-align: center;
+	font-weight: bold;	
 }
 .first-page {
     padding-top: 100px
