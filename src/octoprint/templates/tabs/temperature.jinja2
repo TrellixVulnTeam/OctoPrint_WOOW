@@ -12,16 +12,17 @@ This is our basic tab page.
 <br />
 <div id="basic_redd">
 		<span>Filament : </span><br/>
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendExtrudeCommand() }">{{ _('Extrude') }}</button>
+		{#Added a class section basic-buttons for the extrude and retract options #}
+        <button class="btn btn-block control-box basic-buttons" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendExtrudeCommand() }">{{ _('Extrude') }}</button>
 		<br />
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
+        <button class="btn btn-block control-box basic-buttons" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
 </div>
 
-{% if enableTemperatureGraph %}
+{#{% if enableTemperatureGraph %}
     <div class="row-fluid">
         <div id="temperature-graph"></div>
     </div>
-{% endif %}
+{% endif %}#}
 <div class="row-fluid">
 
     <table class="table table-bordered table-hover" style="table-layout: fixed; width: 100%; margin-top: 20px">

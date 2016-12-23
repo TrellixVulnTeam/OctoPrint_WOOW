@@ -45,6 +45,7 @@
 .btn:active {
     background-color: #ccc \9
 }
+
 .btn:first-child {
     *margin-left: 0
 }
@@ -1344,7 +1345,7 @@ input[type=submit].btn.btn-mini {
 }
 .octoprint-container .accordion-heading [class*=" icon-"],
 .octoprint-container .accordion-heading [class^=icon-] {
-    color: #000
+    color: #ffffff;									//Changed the color of the icon to white
 }
 .print-control .btn {
     padding-left: 4px;
@@ -2252,4 +2253,37 @@ input[type=number] {
 }
 .progress-text-centered .progress-text-back {
     width: 100%
+}
+/*
+Background color of the webapp changed to black
+*/
+body {
+	background-color: #202020;
+	color: white;
+}
+/*
+Changed the texture of the content on the sidebar
+*/
+.accordion-inner{
+	background-color: black;
+	background: -moz-linear-gradient(#000000,#383838)
+}
+/*
+The heading texture of the sidebar
+*/
+.accordion-heading {
+	background-color: black;
+	background: -moz-linear-gradient(#000000,#383838);
+}
+/*
+The text of the heading to white
+*/
+.accordion-heading a{
+	color: white;
+}
+/*
+The buttons width of the Extrude and Retract is minimized
+*/
+.basic-buttons {
+	width: 100px;
 }
