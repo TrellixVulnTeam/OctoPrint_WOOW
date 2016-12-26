@@ -253,6 +253,7 @@ $(function() {
                 }
 
                 allViewModelData.push([viewModelInstance, viewModelBindTargets]);
+				log.info("********* Testing : viewModelBindTargets "+ viewModelBindTargets);
                 allViewModels.push(viewModelInstance);
                 viewModelMap[viewModelId] = viewModelInstance;
             }
@@ -607,6 +608,7 @@ $(function() {
 
                         try {
                             ko.applyBindings(viewModel, element);
+							log.info(" Binded element : ", element);
                             log.debug("View model", viewModel.constructor.name, "bound to", target);
                         } catch (exc) {
                             log.error("Could not bind view model", viewModel.constructor.name, "to target", target, ":", (exc.stack || exc));
